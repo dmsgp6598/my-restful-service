@@ -1,0 +1,31 @@
+server:
+  port: 8088
+
+logging:
+  level:
+    org.springframework: debug
+    
+spring:
+  message:
+    baename: messsages
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true #웹 페이지에서 콘솔로 사용할 수 있도록 true로 설정
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true #작업되고 있는 SQL 문장들을 로그 파일에 보일수 있도록 설정
+    defer-datasource-initialization: true
+  
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+ 
