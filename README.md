@@ -1,4 +1,5 @@
 사용자 관리 API
+
 전체 사용자 목록 조회: HTTP GET method, http://localhost:8088/users
 개별 사용자 조회: HTTP GET method, http://localhost:8088/users/{id}
 사용자 삭제: HTTP DELETE method, http://localhost:8088/users/{id}
